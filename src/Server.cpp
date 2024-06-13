@@ -2,6 +2,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <iterator>
 #include <ostream>
 #include <string>
 #include "zstr.hpp"
@@ -70,9 +71,8 @@ int main(int argc, char *argv[]) {
       return EXIT_FAILURE;
     }
 
-    string content;
+    string content{std::istreambuf_iterator<char>(objectFile), std::istreambuf_iterator<char>()};
 
-    objectFile >> content;
     objectFile.close();
 
     string fileContent = content.substr(content.find("\0") + 1);
