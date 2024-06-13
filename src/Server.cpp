@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include "zstr.hpp"
 
 using namespace std;
 int main(int argc, char *argv[]) {
@@ -12,7 +13,7 @@ int main(int argc, char *argv[]) {
 
   // You can use print statements as follows for debugging, they'll be visible
   // when running tests.
-  cout << "Logs from your program will appear here!\n";
+//  cout << "Logs from your program will appear here!\n";
 
   // Uncomment this block to pass the first stage
   //
@@ -61,7 +62,7 @@ int main(int argc, char *argv[]) {
 
     string filename = hash.substr(2);
 
-    ifstream objectFile(".git/objects/" + directory + "/" + filename);
+    zstr::ifstream objectFile(".git/objects/" + directory + "/" + filename);
 
     if (!objectFile.is_open()) {
       cerr << "Error opening the file!" << endl;
