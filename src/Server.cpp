@@ -75,8 +75,6 @@ int main(int argc, char *argv[]) {
 
     objectFile.close();
 
-    cout << content << endl;
-
     string fileContent = content.substr(content.find('\0') + 1);
 
     cout << fileContent;
