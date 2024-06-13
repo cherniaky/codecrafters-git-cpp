@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
 
     string filename = hash.substr(2);
 
-    zstr::ifstream objectFile(".git/objects/" + directory + "/" + filename);
+    zstr::ifstream objectFile(".git/objects/" + directory + "/" + filename, std::ofstream::binary);
 
     if (!objectFile.is_open()) {
       cerr << "Error opening the file!" << endl;
