@@ -2,6 +2,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <ostream>
 #include <string>
 #include "zstr.hpp"
 
@@ -76,7 +77,7 @@ int main(int argc, char *argv[]) {
 
     string fileContent = content.substr(content.find("\0") + 1);
 
-    cout << fileContent;
+    cout << fileContent << flush;
   } else {
     cerr << "Unknown command " << command << '\n';
     return EXIT_FAILURE;
