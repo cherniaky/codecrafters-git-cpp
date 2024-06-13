@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 
     cout << content << endl;
 
-    string fileContent = content.substr(content.find("\0") + 1);
+    string fileContent = content.substr(content.find('\0') + 1);
 
     cout << fileContent << std::flush;
   } else {
