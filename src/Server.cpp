@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
 
     string fileContent = content.substr(content.find('\0') + 1);
 
-    cout << fileContent << std::flush;
+    cout << fileContent;
   } else {
     cerr << "Unknown command " << command << '\n';
     return EXIT_FAILURE;
